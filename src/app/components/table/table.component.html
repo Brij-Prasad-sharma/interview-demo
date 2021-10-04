@@ -1,0 +1,17 @@
+<table>
+  <thead>
+    <tr>
+      <th *ngFor="let type of elementTypes">{{ type.name }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of rowCount; let i = index">
+      <td
+        *ngFor="let type of elementTypes"
+        (click)="onClicked(elementTypeMap[type.uri][i])"
+        [ngClass]="{ active: elementTypeMap[type.uri][i] === selectedElement, disabled: !elementTypeMap[type.uri][i] }">
+        {{ elementTypeMap[type.uri][i] ? elementTypeMap[type.uri][i].name : '' }}
+      </td>
+    </tr>
+  </tbody>
+</table>

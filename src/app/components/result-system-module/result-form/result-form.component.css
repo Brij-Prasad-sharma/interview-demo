@@ -1,0 +1,58 @@
+.form-entry{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-main{
+  width: 40%;
+}
+.form-wrapper{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.form-wrapper label{
+  padding-bottom: 5px ;
+}
+
+
+.team{
+  width: 45%;
+  padding: 15px 0;
+}
+
+.input-field{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 7px 0;
+}
+
+.date-entry{
+  padding-bottom: 15px;
+}
+.date-entry label{
+  padding-right: 15px;
+}
+
+.form-main button{
+  padding: 7px 15px;
+  background-color: #774ea7;
+  color: #fefefe;
+  cursor: pointer;
+}
+
+.form-main button.disabled {
+  cursor: not-allowed;
+  background-color: #ccc;
+}
+
+.error-message {
+  margin-top: 5px;
+  color: red;
+  font-size: 13px;
+}
+

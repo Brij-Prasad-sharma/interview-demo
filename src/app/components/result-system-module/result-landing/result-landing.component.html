@@ -1,0 +1,11 @@
+<div>
+
+  <div class="wrapper">
+    <button class="btn" routerLink="./"  [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}">Results</button>
+    <button class="btn" routerLink="form" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}">New Result</button>
+    <button class="btn" routerLink="league-table" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}">Table</button>
+  </div>
+
+  <router-outlet></router-outlet>
+
+</div>

@@ -1,0 +1,28 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  margin: 10px 0 0 5px;
+}
+
+.won {
+  color: forestgreen;
+}
+
+.team {
+  margin: 0;
+  padding: 0 15px;
+  cursor: pointer;
+
+}
+
+.team-main {
+  margin-top: 10px;
+}
+.team:nth-child(1){
+  padding-left: 0;
+
+}

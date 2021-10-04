@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* You can add global styles to this file, and also import other style files */
+
+body{
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+}
+.btn {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  background: cadetblue;
+  color: white;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.btn.active{
+  background-color: #774ea7;
+}
+.btn:hover{
+  background-color: #774ea7;
+}
+
+td {
+  text-transform: capitalize;
+}

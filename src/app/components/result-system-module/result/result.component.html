@@ -1,0 +1,13 @@
+<div class="wrapper">
+  <h2 class="heading">Result</h2>
+  <div>
+    <ng-container *ngFor='let result of matchDates'>
+      <h3>{{result.date | date: 'MM/dd/yyyy'}}</h3>
+      <div class="team-main" (click)="editResult(value)" *ngFor="let value of resultList | filterByDate: result">
+        <span class="team" [ngClass]="{'won': value.scoreOne > value.scoreTwo}">{{value.teamOne | titlecase}} ({{value.scoreOne}})</span> Vs <span class="team" [ngClass]="{'won': value.scoreTwo > value.scoreOne}">{{value.teamTwo | titlecase}} ({{value.scoreTwo}})</span>
+        <br>
+      </div>
+    </ng-container>
+  </div>
+</div>
+

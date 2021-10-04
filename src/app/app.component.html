@@ -1,0 +1,9 @@
+<ui-table [elements]="elements" (selected)="onSelected($event)"></ui-table>
+<ui-detail-panel [element]="selected" *ngIf="selected"></ui-detail-panel>
+
+<div class="wrapper">
+  <button class="btn" routerLink="/result">Result System</button>
+</div>
+
+<router-outlet></router-outlet>
+

@@ -1,0 +1,13 @@
+<table>
+  <thead>
+    <th *ngFor="let cl of tableData.columnType">{{cl.type}}</th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let row of finalData">
+      <td *ngFor="let col of tableData.columnType">{{(row[col.type]) ? row[col.type].value : ''}}</td>
+  </tr>
+  <tr *ngIf="finalData.length === 0">
+    <td class="no-data" [colSpan]="tableData.columnType.length">No Data...</td>
+  </tr>
+  </tbody>
+</table>

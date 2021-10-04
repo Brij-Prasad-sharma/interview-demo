@@ -1,0 +1,48 @@
+<div class="form-entry">
+
+  <h2>New Result</h2>
+
+  <form [formGroup]="form" class="form-main">
+
+    <div class="form-wrapper">
+      <div class="team-one team">
+        <div class="input-field">
+          <label>Team Name</label>
+          <input formControlName="teamOne" type="text" placeholder="Team One">
+          <span class="error-message" *ngIf="getControl('teamOne').invalid && form.get('teamOne').dirty">Name is Required</span>
+        </div>
+        <div class="input-field">
+          <label>Score</label>
+          <input formControlName="scoreOne" type="number" placeholder="Score One">
+        </div>
+        <span class="error-message" *ngIf="getControl('scoreOne').invalid && form.get('scoreOne').dirty">Score is Required</span>
+      </div>
+
+      <div class="team-two team">
+        <div class="input-field">
+          <label>Team Name</label>
+          <input formControlName="teamTwo" type="text" placeholder="Team Two">
+        </div>
+        <span class="error-message"
+              *ngIf="getControl('teamTwo').invalid && form.get('teamTwo').dirty">Name is Required</span>
+        <div class="input-field">
+          <label>Score</label>
+          <input formControlName="scoreTwo" type="number" placeholder="Score Two">
+        </div>
+        <span class="error-message" *ngIf="getControl('scoreTwo').invalid && form.get('scoreTwo').dirty">Score is Required</span>
+      </div>
+    </div>
+
+
+    <div class="date-entry">
+      <label>Match Date</label>
+      <input type="date" formControlName="matchDate" placeholder="dd/mm/yyyy">
+    </div>
+
+    <button type="button" (click)="submitResult()" [ngClass]="{'disabled': form.invalid}"
+            [disabled]="form.invalid">{{(params) ? 'Update' : 'Enter'}} Result
+    </button>
+
+  </form>
+
+</div>

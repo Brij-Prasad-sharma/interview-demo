@@ -1,0 +1,20 @@
+<dl>
+    <dt>
+        Uri
+    </dt>
+    <dd>
+        {{ element.uri }}
+    </dd>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        {{ (elementTypes | findByKeyValue: 'uri' : element.type)?.name }}
+    </dd>
+    <dt>
+        Name
+    </dt>
+    <dd>
+        {{ element.name }}
+    </dd>
+</dl>
