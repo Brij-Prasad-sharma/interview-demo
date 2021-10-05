@@ -7,7 +7,7 @@ export class FindByKeyValuePipe implements PipeTransform {
 
   transform(value: Array<{[key: string]: any}>, key: string, cmpValue: string): any {
     if (!value) return; // If value is empty exit the function
-    return value.find(val => val[key] === cmpValue);
+    return value.find(val => val[key].includes(cmpValue));
   }
 
 }

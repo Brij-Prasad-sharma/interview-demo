@@ -11,7 +11,7 @@ import {ResultType, Team} from '../result-system-module/result-service/result.se
 export class DataTableComponent implements OnInit, OnChanges {
   @Input()
   public tableData: DataTableModel<ResultType> = new DataTableModel<ResultType>();
-  // Final List of  team model
+  // Final List of team model
   public finalData: Team[] = [];
 
   constructor() {
@@ -27,7 +27,7 @@ export class DataTableComponent implements OnInit, OnChanges {
 
   // Preparing the league table
   preparingLeagueTableData(result: ResultType[]) {
-    // calculating who is winner , looser or dr
+    // calculating who is winner , looser or draw
     result.forEach((re: ResultType) => {
       if (re.scoreOne === re.scoreTwo) {
         re.draw = `${re.teamOne}:${re.teamTwo}`;

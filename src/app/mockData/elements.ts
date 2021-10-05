@@ -1,7 +1,10 @@
 import { Element } from '../services/main.service';
 
 export const MyCollection: Array<Element> = [
-  { uri: 'book1', name: 'Happy Putter Vol 2', type: 'novel' },
+  { uri: 'book1',
+    name: 'Happy Putter Vol 2',
+    type: 'novel'
+  },
   {
     uri: 'book2',
     name: 'Lord of the Chemistry',

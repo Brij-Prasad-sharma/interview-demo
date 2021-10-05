@@ -20,7 +20,6 @@ export class TableComponent implements OnInit, OnChanges {
 
   @Output()
   public selected: EventEmitter<string> = new EventEmitter<string>();
-
   public elementTypeMap: { [type: string]: Array<Element> } = {};
   public elementTypes: Array<ElementType> = [];
   public elementCountPerType: { [type: string]: number } = {};
@@ -56,6 +55,7 @@ export class TableComponent implements OnInit, OnChanges {
 
   public onClicked(element) {
     if (element) {
+      console.log(element);
       this.selected.emit(element.uri);
       this.selectedElement = element;
     }
